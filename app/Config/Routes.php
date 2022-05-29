@@ -54,6 +54,22 @@ $routes->post('save-marca', 'MarcasController::savemarca');
 
 $routes->get('contactos', 'ContactosController::index');
 $routes->post('update-contacto', 'ContactosController::update');
+
+/* CONFIGURACIÓN */
+$routes->get('carousel', 'ConfiguracionController::carousel_edit');
+$routes->post('upload_pic', 'ConfiguracionController::upload_pic');
+
+$routes->get('mision-vision', 'ConfiguracionController::mision_y_vision_edit');
+$routes->post('update/mision-vision', 'ConfiguracionController::update_mision_vision');
+
+$routes->get('politica-compromiso', 'ConfiguracionController::politica_compromiso_edit');
+$routes->post('update/politica-compromiso', 'ConfiguracionController::update_politica_compromiso');
+
+$routes->get('historia-edit', 'ConfiguracionController::historia_edit');
+$routes->post('update/historia-frase', 'ConfiguracionController::update_historia_frase');
+
+$routes->post('upload_pic/historia', 'ConfiguracionController::upload_pic_historia');
+$routes->post('update/lemas-sublemas', 'ConfiguracionController::update_lemas_sublemas');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
